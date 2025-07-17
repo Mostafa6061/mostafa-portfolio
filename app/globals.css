@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* 
+   * Tailwind CSS 4.0 theme configuration
+   * Genau wie Tailwind 3, aber mit neuer Syntax
+   */
+
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(9% 0.024 237);
+
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(9% 0.024 237);
+
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(9% 0.024 237);
+
+  --color-primary: oklch(75% 0.15 85);
+  --color-primary-foreground: oklch(100% 0 0);
+
+  --color-secondary: oklch(96% 0.015 240);
+  --color-secondary-foreground: oklch(15% 0.02 237);
+
+  --color-muted: oklch(96% 0.015 240);
+  --color-muted-foreground: oklch(65% 0.02 237);
+
+  --color-accent: oklch(75% 0.15 200);
+  --color-accent-foreground: oklch(100% 0 0);
+
+  --color-destructive: oklch(65% 0.15 25);
+  --color-destructive-foreground: oklch(98% 0 0);
+
+  --color-border: oklch(90% 0.01 240);
+  --color-input: oklch(90% 0.01 240);
+  --color-ring: oklch(75% 0.15 85);
+
+  --radius: 0.75rem;
+
+  --color-sidebar-background: oklch(98% 0 0);
+  --color-sidebar-foreground: oklch(35% 0.02 240);
+  --color-sidebar-primary: oklch(75% 0.15 85);
+  --color-sidebar-primary-foreground: oklch(100% 0 0);
+  --color-sidebar-accent: oklch(95% 0.01 240);
+  --color-sidebar-accent-foreground: oklch(12% 0.02 240);
+  --color-sidebar-border: oklch(90% 0.02 240);
+  --color-sidebar-ring: oklch(75% 0.15 200);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-background: oklch(12% 0.02 240);
+  --color-foreground: oklch(98% 0 0);
+
+  --color-card: oklch(15% 0.02 240);
+  --color-card-foreground: oklch(98% 0 0);
+
+  --color-popover: oklch(15% 0.02 240);
+  --color-popover-foreground: oklch(98% 0 0);
+
+  --color-primary: oklch(75% 0.15 85);
+  --color-primary-foreground: oklch(12% 0.02 240);
+
+  --color-secondary: oklch(20% 0.02 240);
+  --color-secondary-foreground: oklch(95% 0 0);
+
+  --color-muted: oklch(18% 0.02 240);
+  --color-muted-foreground: oklch(65% 0 0);
+
+  --color-accent: oklch(75% 0.15 200);
+  --color-accent-foreground: oklch(12% 0.02 240);
+
+  --color-destructive: oklch(65% 0.15 25);
+  --color-destructive-foreground: oklch(98% 0 0);
+
+  --color-border: oklch(25% 0.02 240);
+  --color-input: oklch(20% 0.02 240);
+  --color-ring: oklch(75% 0.15 85);
+
+  --color-sidebar-background: oklch(15% 0.02 240);
+  --color-sidebar-foreground: oklch(95% 0 0);
+  --color-sidebar-primary: oklch(75% 0.15 85);
+  --color-sidebar-primary-foreground: oklch(12% 0.02 240);
+  --color-sidebar-accent: oklch(20% 0.02 240);
+  --color-sidebar-accent-foreground: oklch(95% 0 0);
+  --color-sidebar-border: oklch(25% 0.02 240);
+  --color-sidebar-ring: oklch(75% 0.15 200);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles - genau wie in Tailwind 3 */
+* {
+  @apply border-border;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
 }
