@@ -63,7 +63,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -75,7 +75,7 @@ export default function Index() {
                   ) : (
                     <Moon className="h-4 w-4" />
                   ))}
-              </Button>
+              </Button> */}
               <Button
                 variant="ghost"
                 size="sm"
@@ -95,7 +95,7 @@ export default function Index() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 <Mail className="h-4 w-4 mr-2" />
-                Hire Me
+                Send Me
               </Button>
             </div>
           </div>

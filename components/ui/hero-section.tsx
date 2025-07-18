@@ -3,9 +3,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { AvatarBubble } from "./picture";
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setIsVisible(true);
@@ -24,6 +29,9 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative">
+        <div className="absolute right-0 top-1/4 transform -translate-y-1/2 translate-x-12 lg:translate-x-8 hidden lg:block">
+          <AvatarBubble />
+        </div>
         <div className="min-h-screen flex items-center justify-center relative">
           <div
             className={`transition-all duration-1000 ${
@@ -37,27 +45,30 @@ export function HeroSection() {
                 Available for freelance work
               </div>
             </div>
+            <div className="absolute left-0 top-1/4 transform -translate-y-1/2 translate-x-12 lg:translate-x-8 hidden lg:block">
+              <ThemeToggle />
+            </div>
 
             {/* Main Title - Scattered and rotated */}
             <div className="relative">
               <h1 className="text-6xl md:text-8xl font-bold leading-none">
                 <div className="relative inline-block">
                   <span className="text-foreground block transform -rotate-1 relative z-10">
-                    Creative
+                    Learn
                   </span>
                   <div className="absolute -top-2 -right-8 w-16 h-1 bg-primary/30 transform rotate-12" />
                 </div>
 
                 <div className="relative my-4">
                   <span className="text-primary block transform rotate-2 translate-x-8 relative z-10">
-                    Developer
+                    Build
                   </span>
                   <div className="absolute top-1/2 -left-4 w-12 h-12 border-2 border-accent/20 rounded-full transform -rotate-45" />
                 </div>
 
                 <div className="relative">
                   <span className="text-accent block transform -rotate-1 -translate-x-4">
-                    & Designer
+                    & Grow
                   </span>
                   <div className="absolute -bottom-4 right-0 w-8 h-8 bg-primary/20 transform rotate-45" />
                 </div>
