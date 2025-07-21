@@ -2,7 +2,7 @@
 
 export function AboutSection() {
   return (
-    <section className="py-20 px-6 lg:px-8 bg-muted/20" id="about">
+    <section className="py-20 px-6 lg:px-8 bg-muted" id="about">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Profile Picture */}
@@ -27,8 +27,10 @@ export function AboutSection() {
 
           {/* About Content */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
-            <div className="mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+              About Me
+            </h2>
+            <div className="mb-8 text-center">
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 I'm a passionate full-stack developer and designer with over 5
                 years of experience creating digital solutions that matter.
@@ -56,7 +58,7 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-center">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                 React
               </span>

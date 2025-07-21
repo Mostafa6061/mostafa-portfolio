@@ -3,21 +3,18 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { AvatarBubble } from "./picture";
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   return (
-    <section className="min-h-screen relative px-6 lg:px-8">
+    <section className="h-[90vh] relative px-6 lg:px-8 pt-30 ">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl" />
@@ -29,24 +26,29 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative">
-        <div className="absolute right-0 top-1/4 transform -translate-y-1/2 translate-x-12 lg:translate-x-8 hidden lg:block">
+        <div className="absolute right-1/4 top-1/4 transform -translate-y-1/2 hidden lg:block">
           <AvatarBubble />
         </div>
-        <div className="min-h-screen flex items-center justify-center relative">
+
+        <div className="flex items-center justify-center relative">
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* Status Badge - Positioned creatively */}
-            <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 rotate-3">
-              <div className="inline-flex items-center gap-2 bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm border border-border/50">
-                {/* Star icon can be added here if needed */}
-                Available for freelance work
-              </div>
-            </div>
             <div className="absolute left-0 top-1/4 transform -translate-y-1/2 translate-x-12 lg:translate-x-8 hidden lg:block">
               <ThemeToggle />
+            </div>
+            <div className="absolute left-0 top-1/2 transform  translate-y-16 -rotate-2 z-50 hidden lg:block">
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-accent/10 text-foreground px-5 py-3 rounded-full text-sm border border-primary/20 shadow-lg backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  Open to opportunities
+                </div>
+                {/* Decorative elements for balance */}
+                <div className="absolute -top-1 -right-1 w-3 h-3 border border-accent/30 rounded-full" />
+                <div className="absolute -bottom-2 -left-2 w-1 h-1 bg-primary/40 rounded-full" />
+              </div>
             </div>
 
             {/* Main Title - Scattered and rotated */}
@@ -54,7 +56,7 @@ export function HeroSection() {
               <h1 className="text-6xl md:text-8xl font-bold leading-none">
                 <div className="relative inline-block">
                   <span className="text-foreground block transform -rotate-1 relative z-10">
-                    Learn
+                    Learn,
                   </span>
                   <div className="absolute -top-2 -right-8 w-16 h-1 bg-primary/30 transform rotate-12" />
                 </div>
@@ -82,7 +84,7 @@ export function HeroSection() {
                 design with robust functionality.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground max-w-md transform -translate-x-8 mt-4 leading-relaxed">
-                Let's build something extraordinary together.
+                Let's build something together.
               </p>
 
               {/* Decorative line */}
@@ -92,23 +94,27 @@ export function HeroSection() {
             {/* Buttons - Asymmetrical layout */}
             <div className="flex flex-col sm:flex-row gap-6 items-start relative">
               <div className="transform rotate-1 hover:rotate-0 transition-transform">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 group shadow-lg"
-                >
-                  View My Work
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <a href="#work">
+                  <Button
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 group shadow-lg"
+                  >
+                    View My Work
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
 
               <div className="transform -rotate-1 hover:rotate-0 transition-transform sm:translate-x-4 translate-y-2">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-border text-foreground hover:bg-muted shadow-lg"
-                >
-                  Download Resume
-                </Button>
+                <a href="#contact">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-border text-foreground hover:bg-accent hover:text-black shadow-lg"
+                  >
+                    Download Resume
+                  </Button>
+                </a>
               </div>
 
               {/* Scattered dots around buttons */}

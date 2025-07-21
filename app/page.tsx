@@ -2,16 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Github,
-  Linkedin,
-  Mail,
-  Star,
-  Sun,
-  Moon,
-} from "lucide-react";
-import { useTheme } from "next-themes";
+import { Github, Linkedin, Mail } from "lucide-react";
+
 import { HeroSection } from "@/components/ui/hero-section";
 import { AboutSection } from "@/components/ui/about-section";
 import { WorkSection } from "@/components/ui/work-section";
@@ -21,7 +13,6 @@ import { Footer } from "@/components/ui/footer";
 
 export default function Index() {
   const [isVisible, setIsVisible] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setIsVisible(true);

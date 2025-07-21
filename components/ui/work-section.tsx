@@ -2,7 +2,10 @@
 
 export function WorkSection() {
   return (
-    <section className="py-20 px-6 lg:px-8 bg-muted/20 relative overflow-hidden" id="work">
+    <section
+      className="py-20 px-6 lg:px-8 bg-muted/20 relative overflow-hidden"
+      id="work"
+    >
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16 relative">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
@@ -11,7 +14,8 @@ export function WorkSection() {
             <div className="absolute -bottom-4 left-1/4 w-16 h-1 bg-gradient-to-r from-primary/60 to-accent/60 transform -rotate-3" />
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto relative">
-            A selection of projects that showcase my passion for creating meaningful digital experiences.
+            A selection of projects that showcase my passion for creating
+            meaningful digital experiences.
           </p>
           <div className="absolute top-0 right-1/4 w-1 h-1 bg-primary rounded-full" />
           <div className="absolute bottom-0 left-1/3 w-1.5 h-1.5 bg-accent/60 rounded-full" />
@@ -20,7 +24,9 @@ export function WorkSection() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className={`group relative bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 transform ${i === 1 ? "rotate-1" : i === 2 ? "-rotate-1" : "rotate-1"} hover:rotate-0`}
+              className={`group relative bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 transform ${
+                i === 1 ? "rotate-1" : i === 2 ? "-rotate-1" : "rotate-1"
+              } hover:rotate-0`}
             >
               <div className="aspect-[4/3] bg-muted relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
@@ -35,18 +41,29 @@ export function WorkSection() {
               </div>
               <div className="p-6 relative">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors relative">
-                  <span className="transform inline-block hover:rotate-1 transition-transform">Project {i}</span>
+                  <span className="transform inline-block hover:rotate-1 transition-transform">
+                    Project {i}
+                  </span>
                   {i === 2 && (
                     <div className="absolute -top-1 -right-2 w-6 h-6 border border-accent/20 transform rotate-45" />
                   )}
                 </h3>
                 <p className="text-muted-foreground mb-4 transform translate-x-1">
-                  A modern {i === 1 ? "e-commerce" : i === 2 ? "dashboard" : "portfolio"} application built with cutting-edge technologies and thoughtful user experience design.
+                  A modern{" "}
+                  {i === 1 ? "e-commerce" : i === 2 ? "dashboard" : "portfolio"}{" "}
+                  application built with cutting-edge technologies and
+                  thoughtful user experience design.
                 </p>
                 <div className="flex flex-wrap gap-2 relative">
-                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform rotate-1 hover:rotate-0 transition-transform">React</span>
-                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform -rotate-1 hover:rotate-0 transition-transform">TypeScript</span>
-                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform rotate-1 hover:rotate-0 transition-transform">Tailwind</span>
+                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform rotate-1 hover:rotate-0 transition-transform">
+                    React
+                  </span>
+                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform -rotate-1 hover:rotate-0 transition-transform">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full transform rotate-1 hover:rotate-0 transition-transform">
+                    Tailwind
+                  </span>
                   <div className="absolute -bottom-1 right-0 w-1 h-1 bg-primary/60 rounded-full" />
                 </div>
               </div>
