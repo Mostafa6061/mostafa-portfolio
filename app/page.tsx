@@ -54,33 +54,27 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              {/* <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="text-muted-foreground hover:text-foreground"
+              <a href="https://github.com/Mostafa6061" target="_blank">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <Github className="h-4 w-4" />
+                </Button>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mostafa-bahadori/"
+                target="_blank"
               >
-                {isVisible &&
-                  (theme === "dark" ? (
-                    <Sun className="h-4 w-4" />
-                  ) : (
-                    <Moon className="h-4 w-4" />
-                  ))}
-              </Button> */}
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <Github className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <Linkedin className="h-4 w-4" />
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </a>
               <Button
                 size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
